@@ -11,7 +11,7 @@ import {
   routerRedux
 } from 'dva/router';
 
-import styles from './header.less';
+import styles from './Header.less';
 
 const TabPane = Tabs.TabPane;
 const tabs = [{
@@ -51,9 +51,8 @@ function Header({
       <Tabs
         destroyInactiveTabPane
         defaultActiveKey="/"
-        activeUnderlineColor="#e91010"
         swipeable={false}
-        pageSize={6}
+        pageSize={5}
         onTabClick={onTabClick.bind(null, dispatch)}
       >
         {tabs.map(tab => (

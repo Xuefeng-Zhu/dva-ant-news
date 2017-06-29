@@ -14,7 +14,8 @@ app.use(Loading({
 }));
 
 // 3. Model
-// app.model(require('./models/example'));
+app.model(require('./models/article'));
+app.model(require('./models/example'));
 
 // 4. Router
 app.router(require('./router.jsx'));

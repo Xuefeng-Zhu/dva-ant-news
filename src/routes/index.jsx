@@ -4,29 +4,33 @@ import {
   connect
 } from 'dva';
 
+import {
+  WingBlank
+} from 'antd-mobile';
+
+import ArticleList from '../components/list/ArticleList.jsx';
+
 import styles from './index.less';
 
 function Index({
-  location
+  articles
 }) {
   return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to dva!</h1>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/index.js</code> and save to reload.</li>
-        <li><a href="https://github.com/dvajs/dva-docs/blob/master/v1/en-us/getting-started.md">Getting Started</a></li>
-      </ul>
-    </div>
+    <WingBlank size="sm">
+      <ArticleList articles={articles} />
+    </WingBlank>
   );
 }
 
 Index.propTypes = {
-  location: PropTypes.object.isRequired
+  articles: PropTypes.array.isRequired
 };
 
-function mapStateToProps() {
-  return {};
+function mapStateToProps(state, ownProps) {
+  return {
+    articles: state.article.articles
+  };
 }
+
 
 export default connect(mapStateToProps)(Index);
