@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from './header.jsx';
-import Content from './content.jsx';
 
 import styles from './main.less';
 
@@ -12,7 +11,7 @@ function Main({
   return (
     <div className={styles.normal}>
       <Header location={location} />
-      <Content location={location} childrens={children} />
+      {children}
     </div>
   );
 }
