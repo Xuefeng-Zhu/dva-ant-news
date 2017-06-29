@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   ListView,
-  WhiteSpace,
-  Card
+  WhiteSpace
 } from 'antd-mobile';
 import ArticleCard from './ArticleCard.jsx';
 
