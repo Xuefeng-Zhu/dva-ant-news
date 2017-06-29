@@ -4,7 +4,7 @@ import {
   Router, Route
 } from 'dva/router';
 
-import Main from './components/layout/main.jsx';
+import Main from './components/layout/Main.jsx';
 
 import Index from './routes/index.jsx';
 import Page01 from './routes/page01.jsx';

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from './header.jsx';
+import Header from './Header.jsx';
 
-import styles from './main.less';
+import styles from './Main.less';
 
 function Main({
   children, location
