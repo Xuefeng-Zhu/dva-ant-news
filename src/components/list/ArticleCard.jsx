@@ -2,22 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
+  connect
+} from 'dva';
+import {
+  routerRedux
+} from 'dva/router';
+
+import {
   Card,
   Flex
 } from 'antd-mobile';
 
 import styles from './ArticleCard.less';
 
+function onClick(dispatch, articleId) {
+  dispatch(routerRedux.push(`article/${articleId}`));
+}
+
 function ArticleCard({
-  article
+  article,
+  dispatch
 }) {
   const author = article.author;
   const avatarStyle = {
-    'background-image': `url(${author.image})`
+    backgroundImage: `url(${author.image})`
   };
 
   return (
-    <Card>
+    <Card onClick={onClick.bind(null, dispatch, article.id)}>
       <Card.Body className={styles.body}>
         <Flex>
           <Flex.Item className={styles.detail}>
@@ -42,7 +54,12 @@ function ArticleCard({
 }
 
 ArticleCard.propTypes = {
+  dispatch: PropTypes.func.isRequired,
   article: PropTypes.object.isRequired
 };
 
-export default ArticleCard;
+function mapStateToProps() {
+  return {};
+}
+
+export default connect(mapStateToProps)(ArticleCard);
