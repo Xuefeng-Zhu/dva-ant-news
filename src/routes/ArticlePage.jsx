@@ -5,6 +5,7 @@ import {
 } from 'dva';
 
 import Article from '../components/ui/Article.jsx';
+import Recommends from '../components/ui/Recommends.jsx';
 
 function ArticlePage({
   article
@@ -12,6 +13,7 @@ function ArticlePage({
   return (
     <div>
       <Article article={article} />
+      <Recommends />
     </div>
   );
 }
