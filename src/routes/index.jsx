@@ -4,21 +4,13 @@ import {
   connect
 } from 'dva';
 
-import {
-  WingBlank
-} from 'antd-mobile';
-
 import ArticleList from '../components/list/ArticleList.jsx';
-
-import styles from './index.less';
 
 function Index({
   articles
 }) {
   return (
-    <WingBlank size="sm">
-      <ArticleList articles={articles} />
-    </WingBlank>
+    <ArticleList articles={articles} />
   );
 }
 

@@ -6,10 +6,11 @@ import {
 
 import Main from './components/layout/Main.jsx';
 
-import Index from './routes/index.jsx';
+import Index from './routes/Index.jsx';
 import Page01 from './routes/page01.jsx';
 import Page02 from './routes/page02.jsx';
 import Page03 from './routes/page03.jsx';
+import ArticlePage from './routes/ArticlePage.jsx';
 
 function RouterConfig({
   history
@@ -22,6 +23,7 @@ function RouterConfig({
         <Route path="/resources" component={Page02} />
         <Route path="/articles" component={Page03} />
         <Route path="/submission" component={Page03} />
+        <Route path="/article/:articleId" component={ArticlePage} />
       </Route>
     </Router>
   );

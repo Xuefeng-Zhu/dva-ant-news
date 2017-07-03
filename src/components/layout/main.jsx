@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  WingBlank
+} from 'antd-mobile';
+
 
 import Header from './Header.jsx';
-
 import styles from './Main.less';
 
 function Main({
@@ -11,7 +14,10 @@ function Main({
   return (
     <div className={styles.normal}>
       <Header location={location} />
-      {children}
+      <WingBlank size="sm">
+        {children}
+      </WingBlank>
+
     </div>
   );
 }
