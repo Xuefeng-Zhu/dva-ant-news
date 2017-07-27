@@ -39,9 +39,9 @@ function ArticleCard({
             </div>
             <p className={styles.title}>{article.title}</p>
             <div className={styles.meta}>
-              <span>阅读({article.readCount})</span>
-              <span>评论({article.commentCount})</span>
-              <span>赞({article.likeCount})</span>
+              <span>Views({article.readCount})</span>
+              <span>Comments({article.commentCount})</span>
+              <span>Likes({article.likeCount})</span>
             </div>
           </Flex.Item>
           <Flex.Item>

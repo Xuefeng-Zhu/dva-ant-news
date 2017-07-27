@@ -15,20 +15,14 @@ import styles from './Header.less';
 
 const TabPane = Tabs.TabPane;
 const tabs = [{
-  title: '首页',
+  title: 'Home',
   path: '/'
 }, {
-  title: '讨论',
+  title: 'Hot',
   path: '/discussion'
 }, {
-  title: '资料',
+  title: 'Recommended',
   path: '/resources'
-}, {
-  title: '同人文',
-  path: '/articles'
-}, {
-  title: '投稿',
-  path: '/submission'
 }];
 
 function onTabClick(dispatch, key) {
@@ -45,7 +39,7 @@ function Header({
         className={styles.header}
         iconName={null}
       >
-        全职高手
+        Dva Ant News
       </NavBar>
 
       <Tabs

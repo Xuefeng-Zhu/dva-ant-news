@@ -14,10 +14,10 @@ function Comments() {
       <WhiteSpace />
       <Card>
         <div className={styles.header}>
-          <div>评论</div>
+          <div>Comments</div>
           <textarea
             className={styles.textarea}
-            placeholder="你的评论可以一针见血"
+            placeholder="Leave your comments"
             rows={5}
           />
           <Button
@@ -25,7 +25,7 @@ function Comments() {
             activeClassName={styles.activeSubmitBtn}
             type="primary"
             inline
-          >提交评论</Button>
+          >Submit</Button>
         </div>
         {/*<Card.Body>
         </Card.Body>*/}

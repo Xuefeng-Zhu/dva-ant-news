@@ -14,12 +14,12 @@ function Recommends() {
       <WhiteSpace />
       <Card>
         <Card.Body>
-          <div>推荐阅读</div>
+          <div>Related Readings</div>
           <ul className={styles.list}>
-            <li><Link to={'/article/1'}>文章 1</Link></li>
-            <li><Link to={'/article/1'}>文章 2</Link></li>
-            <li><Link to={'/article/1'}>文章 3</Link></li>
-            <li><Link to={'/article/1'}>文章 4</Link></li>
+            <li><Link to={'/article/1'}>Article 1</Link></li>
+            <li><Link to={'/article/1'}>Article 2</Link></li>
+            <li><Link to={'/article/1'}>Article 3</Link></li>
+            <li><Link to={'/article/1'}>Article 4</Link></li>
           </ul>
         </Card.Body>
       </Card>

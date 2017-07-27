@@ -46,7 +46,7 @@ export default class ArticleList extends React.Component {
     return (
       <ListView
         dataSource={this.state.dataSource}
-        renderHeader={() => <span>最新发布</span>}
+        renderHeader={() => <span>Latest News</span>}
         renderRow={row}
         renderSeparator={separator}
         className="am-list"

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'dva/router';
 
 import {
   Card,
@@ -26,11 +27,11 @@ function Article({
 
           <div className={styles.meta}>
             <b>{article.author.name}</b>
-            <span> 发布于{article.date.toDateString()}</span>
+            <span> Published at {article.date.toDateString()}</span>
             <span className={styles.counts}>
-              <span>阅读({article.readCount})</span>
-              <span>评论({article.commentCount})</span>
-              <span>赞({article.likeCount})</span>
+              <span>Views({article.readCount})</span>
+              <span>Comments({article.commentCount})</span>
+              <span>Likes({article.likeCount})</span>
             </span>
           </div>
         </div>
@@ -43,17 +44,21 @@ function Article({
             type="primary"
             icon="koubei-o"
             inline
-          >赞({article.likeCount})</Button>
+          >Like({article.likeCount})</Button>
         </Card.Body>
 
         <Flex className={styles.footer}>
           <Flex.Item>
-            <div>上一篇</div>
-            <div>文章1</div>
+            <Link to={`/article/${article.prevArticle.id}`}>
+              <b>Previous Article</b>
+              <div>{article.prevArticle.title}</div>
+            </Link>
           </Flex.Item>
           <Flex.Item>
-            <div>下一篇</div>
-            <div>文章2</div>
+            <Link to={`/article/${article.nextArticle.id}`}>
+              <b>Next Article</b>
+              <div>{article.nextArticle.title}</div>
+            </Link>
           </Flex.Item>
         </Flex>
       </Card>
