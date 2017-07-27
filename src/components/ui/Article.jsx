@@ -27,7 +27,7 @@ function Article({
 
           <div className={styles.meta}>
             <b>{article.author.name}</b>
-            <span> Published at {article.date.toDateString()}</span>
+            <span> published at {article.date.toDateString()}</span>
             <span className={styles.counts}>
               <span>Views({article.readCount})</span>
               <span>Comments({article.commentCount})</span>
