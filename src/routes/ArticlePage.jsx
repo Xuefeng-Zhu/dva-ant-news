@@ -6,6 +6,7 @@ import {
 
 import Article from '../components/ui/Article.jsx';
 import Recommends from '../components/ui/Recommends.jsx';
+import Comments from '../components/ui/Comments.jsx';
 
 function ArticlePage({
   article
@@ -14,6 +15,7 @@ function ArticlePage({
     <div>
       <Article article={article} />
       <Recommends />
+      <Comments comments={article.comments} />
     </div>
   );
 }

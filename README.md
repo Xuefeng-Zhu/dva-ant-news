@@ -1,5 +1,10 @@
-# dva-antd-mobile-starter [![Build Status](https://travis-ci.org/xlsdg/dva-antd-mobile-starter.svg?branch=master)](https://travis-ci.org/xlsdg/dva-antd-mobile-starter)
+# dva-ant-news
 
-> Get started with Dva.js and Ant Design mobile.
+A simple mobile news client based on React, Dva, Ant Mobile.
 
-![Screen Shot](screenshot.png)
+## Instruction
+
+1. yarn/npm install
+2. npm/yarn start
+
+
